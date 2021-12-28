@@ -48,7 +48,7 @@ def get_adjlist_pkl(dl, meta, type_id=0, return_dic=True, symmetric=False):
 
 def load_IMDB_data_new():
     from scripts.data_loader import data_loader
-    dl = data_loader('/home/zhaohe/data/IMDB')
+    dl = data_loader('../../data/IMDB')
     adjlist00, idx00 = get_adjlist_pkl(dl, [(0,1), (1,0)], 0, False, True)
     G00 = nx.readwrite.adjlist.parse_adjlist(adjlist00, create_using=nx.MultiDiGraph)
     print('meta path 1 done')
@@ -111,7 +111,7 @@ def load_IMDB_data_new():
 
 def load_Freebase_data():
     from scripts.data_loader import data_loader
-    dl = data_loader('/home/zhaohe/data/Freebase')
+    dl = data_loader('../../data/Freebase')
     import json
     adjlists, idxs = [], []
     for fn in ['meta1.json', 'meta2.json']:
