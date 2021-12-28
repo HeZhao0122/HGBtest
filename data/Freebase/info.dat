@@ -1,0 +1,73 @@
+node.dat
+
+TYPE	MEANING
+0		BOOK
+1		FILM
+2		MUSIC
+3		SPORTS
+4		PEOPLE
+5		LOCATION
+6		ORGANIZATION
+7		BUSINESS
+
+Attribute Dimension: 0
+
+-----------------------------------------------
+
+link.dat
+
+LINK	START	END	MEANING
+0		0		0	BOOK-and-BOOK
+1		0		1	BOOK-to-FILM
+2		0		3	BOOK-on-SPORTS
+3		0		5	BOOK-on-LOCATION
+4		0		6	BOOK-about-ORGANIZATION
+5		1		1	FILM-and-FILM
+6		2		0	MUSIC-in-BOOK
+7		2		1	MUSIC-in-FILM
+8		2		2	MUSIC-and-MUSIC
+9		2		3	MUSIC-for-SPORTS
+10		2		5	MUSIC-on-LOCATION
+11		3		1	SPORTS-in-FILM
+12		3		3	SPORTS-and-SPORTS
+13		3		5	SPORTS-on-LOCATION
+14		4		0	PEOPLE-to-BOOK
+15		4		1	PEOPLE-to-FILM
+16		4		2	PEOPLE-to-MUSIC
+17		4		3	PEOPLE-to-SPORTS
+18		4		4	PEOPLE-and-PEOPLE
+19		4		5	PEOPLE-on-LOCATION
+20		4		6	PEOPLE-in-ORGANIZATION
+21		4		7	PEOPLE-in-BUSINESS
+22		5		1	LOCATION-in-FILM
+23		5		5	LOCATION-and-LOCATION
+24		6		1	ORGANIZATION-in-FILM
+25		6		2	ORGANIZATION-to-MUSIC
+26		6		3	ORGANIZATION-to-SPORTS
+27		6		5	ORGANIZATION-on-LOCATION
+28		6		6	ORGANIZATION-and-ORGANIZATION
+29		6		7	ORGANIZATION-for-BUSINESS
+30		7		0	BUSINESS-about-BOOK
+31		7		1	BUSINESS-about-FILM
+32		7		2	BUSINESS-about-MUSIC
+33		7		3	BUSINESS-about-SPORTS
+34		7		5	BUSINESS-on-LOCATION
+35		7		7	BUSINESS-and-BUSINESS
+
+Targeting: Link Type (0,0,0)
+
+----------------------------------------------- 
+
+label.dat
+
+TYPE	CLASS	MEANING
+0		0		scholarly_work
+0		1		book_character/book_subject
+0		2		publication/published_work
+0		3		short_story
+0		4		magazine/magazine_issue/magazine_genre
+0		5		newspaper
+0		6		journal_article/journal/journal_publication
+0		7		poem/poem_character
+
+Targeting: Label Type 0
