@@ -1,0 +1,5 @@
+pytorch version >=1.7
+pip install dgl, cogdl
+# 跑一下Freebase的数据集， ACM, DBLP, IMDB可以跑通
+cd NC/benchmark/methods/simpleHGN
+python run_Freebase.py
